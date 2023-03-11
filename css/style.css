@@ -179,7 +179,7 @@ h1 {
     color: black;
   }
 
-  .accordion-item__radio:checked:active ~ .accordion-item__title {
+  .accordion-item__label:active .accordion-item__title {
     color: #247ba0;
   }
 }
