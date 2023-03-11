@@ -90,3 +90,35 @@ h1 {
   max-height: 0;
   transition: max-height ease 400ms;
 }
+
+@media (hover: hover) {
+  .accordion:hover * {
+    cursor: pointer;
+  }
+
+  .accordion:hover .accordion-item__icon {
+    opacity: 1;
+  }
+
+  .accordion:hover .accordion-item__label {
+    color: black;
+  }
+
+  .accordion-item__label {
+    color: #247ba0;
+    transition: color 250ms;
+  }
+
+  .accordion-item__icon {
+    opacity: 0;
+    transition: opacity ease 250ms;
+  }
+
+  .accordion-item:hover .accordion-item__icon {
+    opacity: 1;
+  }
+
+  .accordion-item__radio:checked ~ .accordion-item__label {
+    color: black;
+  }
+}
