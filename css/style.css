@@ -71,11 +71,16 @@ h1 {
   padding-bottom: 0.6em;
 }
 
+.accordion-item__radio:checked ~ .accordion-item__icon {
+  transform: rotate(45deg);
+}
+
 .accordion-item__icon {
   display: flex;
   width: 6%;
   align-items: center;
   justify-content: center;
+  transition: all ease 250ms;
 }
 
 .accordion-item__icon i {
@@ -88,7 +93,7 @@ h1 {
   font-size: 1rem;
   font-weight: 400;
   max-height: 0;
-  transition: max-height ease 400ms;
+  transition: all ease 400ms;
 }
 
 @media (hover: hover) {
@@ -111,11 +116,16 @@ h1 {
 
   .accordion-item__icon {
     opacity: 0;
-    transition: opacity ease 250ms;
   }
 
   .accordion-item:hover .accordion-item__icon {
     opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  .accordion-item:hover .accordion-item__content {
+    max-height: 100vh;
+    padding-bottom: 0.6em;
   }
 
   .accordion-item__radio:checked ~ .accordion-item__label {
